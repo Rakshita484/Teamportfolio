@@ -3,124 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Group Project - Homepage</title>
+    <title>City Plan Portfolio - Home</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
             margin: 0;
-            padding: 0;
-            background: #f4f4f4;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to bottom right, #2b5876, #4e4376);
+            color: #fff;
         }
         header {
-            background: #4CAF50;
-            color: white;
             text-align: center;
-            padding: 1em;
+            padding: 50px;
+            background: rgba(0, 0, 0, 0.5);
+        }
+        header h1 {
+            font-size: 3rem;
+            letter-spacing: 2px;
+        }
+        header p {
+            font-size: 1.2rem;
         }
         nav {
-            background: #333;
-            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 10px 0;
         }
         nav a {
-            color: white;
             text-decoration: none;
-            padding: 14px 20px;
-            display: inline-block;
-            text-align: center;
+            color: #fff;
+            margin: 0 15px;
+            font-size: 1.1rem;
+            transition: color 0.3s;
         }
         nav a:hover {
-            background: #575757;
+            color: #ffd700;
         }
-        section {
-            padding: 2em;
+        .content {
             text-align: center;
+            padding: 100px 20px;
         }
-        .team-section, .contact-section {
-            background: #e0e0e0;
-            margin-top: 2em;
+        .content h2 {
+            font-size: 2.5rem;
+            color: #ffd700;
+        }
+        .content p {
+            max-width: 800px;
+            margin: 20px auto;
+            line-height: 1.8;
         }
         footer {
-            background: #333;
-            color: white;
             text-align: center;
-            padding: 1em;
-            position: absolute;
-            bottom: 0;
-            width: 100%;
-        }
-        .team-member {
-            display: inline-block;
-            width: 200px;
-            margin: 10px;
-            background: white;
+            background: rgba(0, 0, 0, 0.8);
             padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        .team-member img {
-            width: 100%;
-            border-radius: 50%;
-            margin-bottom: 10px;
+            color: #fff;
         }
     </style>
 </head>
 <body>
-
-<header>
-    <h1>Welcome to Our Group Project</h1>
-    <p>Innovation, Collaboration, and Success</p>
-</header>
-
-<nav>
-    <a href="#home">Home</a>
-    <a href="#team">Our Team</a>
-    <a href="#goals">Project Goals</a>
-    <a href="#contact">Contact</a>
-</nav>
-
-<section id="home">
-    <h2>Welcome to Our Group Project Homepage</h2>
-    <p>Explore our project, meet the team, and find out how we’re innovating for a better future!</p>
-</section>
-
-<section id="team" class="team-section">
-    <h2>Meet Our Team</h2>
-    <div class="team-member">
-        <img src="team-member-1.jpg" alt="Team Member 1">
-        <h3>Rakshita</h3>
-        <p>Project Manager</p>
+    <header>
+        <h1>City Plan Design Portfolio</h1>
+        <p>Unleashing creativity and innovation in urban design.</p>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="course.html">Course Introduction</a>
+        <a href="team.html">Team Details</a>
+        <a href="city.html">City Introduction</a>
+        <a href="business.html">Business Case Identification</a>
+    </nav>
+    <div class="content">
+        <h2>Welcome to Our Portfolio</h2>
+        <p>
+            This portfolio showcases the efforts and creativity involved in designing an innovative and sustainable city plan. Explore our journey, meet the team, and dive into the intricacies of urban design.
+        </p>
     </div>
-    <div class="team-member">
-        <img src="team-member-2.jpg" alt="Team Member 2">
-        <h3>Team Member 2</h3>
-        <p>Developer</p>
-    </div>
-    <div class="team-member">
-        <img src="team-member-3.jpg" alt="Team Member 3">
-        <h3>Team Member 3</h3>
-        <p>Designer</p>
-    </div>
-</section>
-
-<section id="goals">
-    <h2>Our Project Goals</h2>
-    <ul>
-        <li>Build innovative solutions</li>
-        <li>Enhance collaboration</li>
-        <li>Deliver a high-quality product</li>
-    </ul>
-</section>
-
-<section id="contact" class="contact-section">
-    <h2>Contact Us</h2>
-    <p>If you have any questions, feel free to reach out to us.</p>
-    <p>Email: <a href="mailto:contact@group.com">contact@group.com</a></p>
-</section>
-
-<footer>
-    <p>&copy; 2025 Group Project. All Rights Reserved.</p>
-</footer>
-
+    <footer>
+        <p>&copy; 2025 City Plan Design Team. All rights reserved.</p>
+    </footer>
 </body>
 </html>
