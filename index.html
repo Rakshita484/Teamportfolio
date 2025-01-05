@@ -1,63 +1,41 @@
-{
-  "private": true,
-  "name": "masterPortfolio",
-  "version": "0.1.0",
-  "homepage": ".",
-  "scripts": {
-    "build": "react-scripts --openssl-legacy-provider build",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -b gh-pages -d build",
-    "eject": "react-scripts eject",
-    "start": "react-scripts --openssl-legacy-provider start",
-    "test": "react-scripts test"
-  },
-  "dependencies": {
-    "apollo-boost": "^0.4.4",
-    "baseui": "^9.65.3",
-    "chart.js": "^2.9.3",
-    "gh-pages": "^2.1.1",
-    "node-fetch": "^2.6.0",
-    "prettier-package-json": "^2.1.3",
-    "react": "^16.10.2",
-    "react-bootstrap": "^1.0.0-beta.16",
-    "react-chartjs-2": "^2.9.0",
-    "react-dom": "^16.10.2",
-    "react-helmet": "^6.1.0",
-    "react-reveal": "^1.2.2",
-    "react-router-dom": "^5.1.2",
-    "react-scripts": "3.2.0",
-    "styled-components": "^5.1.1",
-    "styletron-engine-atomic": "^1.4.6",
-    "styletron-react": "^5.2.7"
-  },
-  "devDependencies": {
-    "dotenv": "^6.2.0",
-    "husky": "^4.2.5",
-    "lint-staged": "^10.2.11",
-    "prettier": "2.0.5"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "*.json": "prettier-package-json --write",
-    "*.{js,css,md}": "prettier --write"
-  }
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Oswald:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <ul class="nav-links">
+            <li><a href="#home">HOME</a></li>
+            <li><a href="#course-project">COURSE PROJECT INTRODUCTION</a></li>
+            <li><a href="#problem-statement">PROBLEM STATEMENT</a></li>
+            <li><a href="#team-details">TEAM DETAILS</a></li>
+            <li><a href="#business-case-identifications">BUSINESS CASES INDETIFICATION</a></li>
+            <li><a href="#code-overview">CODE OVERVIEW</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="section" id="home">
+            <div class="left-side">
+                <img id="image1" class="slide-from-left" src="images/pinkcity.jpg" alt="Pink City">
+                <img id="image2" class="slide-from-bottom" src="images/fromdownimage.jpg" alt="From Down Image">
+            </div>
+            <div class="right-side">
+                <h1 class="neon-blue">Design Analysis and <span class="highlight">Algorithm</span></h1>
+                <p>
+                    The <span class="highlight">Design and Analysis of Algorithms</span> course focuses on understanding, designing, 
+                    and evaluating algorithms to solve computational problems efficiently.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

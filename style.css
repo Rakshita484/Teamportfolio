@@ -1,85 +1,255 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>City Plan Portfolio - Home</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Arial', sans-serif;
-            background: linear-gradient(to bottom right, #2b5876, #4e4376);
-            color: #fff;
-        }
-        header {
-            text-align: center;
-            padding: 50px;
-            background: rgba(0, 0, 0, 0.5);
-        }
-        header h1 {
-            font-size: 3rem;
-            letter-spacing: 2px;
-        }
-        header p {
-            font-size: 1.2rem;
-        }
-        nav {
-            display: flex;
-            justify-content: center;
-            background-color: rgba(0, 0, 0, 0.8);
-            padding: 10px 0;
-        }
-        nav a {
-            text-decoration: none;
-            color: #fff;
-            margin: 0 15px;
-            font-size: 1.1rem;
-            transition: color 0.3s;
-        }
-        nav a:hover {
-            color: #ffd700;
-        }
-        .content {
-            text-align: center;
-            padding: 100px 20px;
-        }
-        .content h2 {
-            font-size: 2.5rem;
-            color: #ffd700;
-        }
-        .content p {
-            max-width: 800px;
-            margin: 20px auto;
-            line-height: 1.8;
-        }
-        footer {
-            text-align: center;
-            background: rgba(0, 0, 0, 0.8);
-            padding: 20px;
-            color: #fff;
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <h1>City Plan Design Portfolio</h1>
-        <p>Unleashing creativity and innovation in urban design.</p>
-    </header>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="course.html">Course Introduction</a>
-        <a href="team.html">Team Details</a>
-        <a href="city.html">City Introduction</a>
-        <a href="business.html">Business Case Identification</a>
-    </nav>
-    <div class="content">
-        <h2>Welcome to Our Portfolio</h2>
-        <p>
-            This portfolio showcases the efforts and creativity involved in designing an innovative and sustainable city plan. Explore our journey, meet the team, and dive into the intricacies of urban design.
-        </p>
-    </div>
-    <footer>
-        <p>&copy; 2025 City Plan Design Team. All rights reserved.</p>
-    </footer>
-</body>
-</html>
+/* General Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', Arial, sans-serif;
+    background-color: #121212;
+    color: white;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: #0d0a0a;
+}
+
+h1 {
+    margin-top: 20px;
+}
+
+.responsive-image {
+    width: 100%; /* Make the image responsive */
+    max-width: 800px; /* Set a max width */
+    height: auto; /* Maintain aspect ratio */
+    border: 2px solid #333; /* Optional border */
+    border-radius: 10px; /* Optional rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow */
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #333;
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    font-family: 'Opensans', sans-serif;
+    transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+    color: #00f;
+}
+
+/* Container and Section Layout */
+.container {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    min-height: 100vh;
+}
+
+.section {
+    width: 100%;
+    display: flex;
+}
+
+/* Left Side (Images) */
+.left-side {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.left-side img {
+    max-width: 45%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Right Side (Text) */
+.right-side {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 1rem;
+    text-align: left;
+    opacity: 0; /* Start hidden before animation */
+}
+
+.right-side h1, .right-side h2 {
+    font-size: 3rem;
+    color: #00f;
+    margin-bottom: 1rem;
+    font-family: 'Opensans', sans-serif;
+}
+
+.right-side p {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    color: white;
+    font-family: 'Opensans', sans-serif;
+}
+
+.highlight {
+    color: #00f;
+}
+
+/* Team Details Section */
+.team-heading {
+    font-size: 2.5rem;
+    color: rgb(41, 41, 238);
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.team-details {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.team-member {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+    width: 22%;
+    animation: slideFromBottom 1s ease-in-out forwards;
+    opacity: 0;
+}
+
+/* Adding delay for each team member */
+.team-member:nth-child(1) {
+    animation-delay: 0.2s;
+}
+.team-member:nth-child(2) {
+    animation-delay: 0.4s;
+}
+.team-member:nth-child(3) {
+    animation-delay: 0.6s;
+}
+.team-member:nth-child(4) {
+    animation-delay: 0.8s;
+}
+
+.team-member p {
+    margin: 0.5rem 0;
+    font-size: 1.2rem;
+    line-height: 1.4;
+}
+
+/* Animations */
+@keyframes slideFromLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideFromRight {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideFromBottom {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.slide-from-left {
+    animation: slideFromLeft 1.5s forwards;
+}
+
+.slide-from-right {
+    animation: slideFromRight 1.5s forwards;
+}
+
+.slide-from-bottom {
+    animation: slideFromBottom 1.5s forwards;
+}
+
+/* Business Case Studies Section */
+.business-case {
+    background-color: #222;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Problem Statement Section */
+.problem-statement {
+    margin-top: 2rem;
+    padding: 2rem;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.problem-statement h2 {
+    margin-bottom: 1rem;
+    color: #00f;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+}
+
+footer a {
+    color: #00f;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
